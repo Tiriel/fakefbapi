@@ -1,0 +1,10 @@
+App\Entity\User:
+    user_{1..50}:
+        first_name: '<firstName()>'
+        last_name: '<lastName()>'
+        middle_name: '30%? <firstName()>'
+        birthday: '<immutableDateTimeBetween("-50 years", "-10 years")>'
+        email: '<email()>'
+        gender: '<randomElement(["male", "female", "other", "prefer not to say"])>'
+        quotes: '20%? <sentences(2, true)>'
+        profile_pic: '<picsumUrl(200, 200)>'

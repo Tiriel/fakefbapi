@@ -1,0 +1,7 @@
+App\Entity\Comment:
+    comment_{1..600}:
+        created_time: '<immutableDateTimeBetween("-2 years", "now")>'
+        from_user: '@user_*'
+        like_count: '<numberBetween(0, 50)>'
+        message: '<realText()>'
+        parent: '30%? @comment_*'

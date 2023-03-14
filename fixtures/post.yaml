@@ -1,0 +1,15 @@
+App\Entity\Post:
+    post_{1..200}:
+        created_time: '<immutableDateTime()>'
+        description: '<text()>'
+        icon: '<emoji()>'
+        is_app_share: '<boolean()>'
+        is_hidden: '<boolean()>'
+        is_expired: '<boolean()>'
+        is_published: '<boolean()>'
+        link: '30%? <url()>'
+        name: '<linkName($link)>'
+        type: '<randomEnumCase(App\\Enum\\PostTypeEnum)>'
+        message: '<paragraphs(*, true)>'
+        from_user: '@user_*'
+        comments: '<numberBetween(1, 20)>x @comment_*'
