@@ -1,5 +1,5 @@
 App\Entity\Comment:
-    comment_{1..600}:
+    comment_{1..30}:
         created_time: '<immutableDateTimeBetween("-2 years", "now")>'
         from_user: '@user_*'
         like_count: '<numberBetween(0, 50)>'

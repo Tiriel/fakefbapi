@@ -37,6 +37,7 @@ class Comment
     #[ORM\Column(type: Types::TEXT)]
     private ?string $message = null;
 
+    #[Ignore]
     #[ORM\ManyToOne(targetEntity: self::class, inversedBy: 'comments')]
     private ?self $parent = null;
 
