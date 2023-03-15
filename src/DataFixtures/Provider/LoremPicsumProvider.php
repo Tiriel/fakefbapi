@@ -6,7 +6,7 @@ use Faker\Provider\Base;
 
 class LoremPicsumProvider extends Base
 {
-    public const BASE_URL = 'https://picsum.photos/';
+    public const BASE_URL = 'https://picsum.photos';
 
     /**
      * Generate the URL that will return a random image
@@ -26,7 +26,7 @@ class LoremPicsumProvider extends Base
         $height = 480,
         $gray = false
     ) {
-        return sprintf('%s/%s/%s.jpg', self::BASE_URL, $width, $height) . $gray ? '?grayscale' : '';
+        return sprintf('%s/%s/%s.jpg', self::BASE_URL, $width, $height) . ($gray ? '?grayscale' : '');
     }
 
     /**

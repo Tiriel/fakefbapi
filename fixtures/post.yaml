@@ -1,5 +1,5 @@
 App\Entity\Post:
-    post_{1..10}:
+    post_{1..200}:
         created_time: '<immutableDateTime()>'
         description: '<text()>'
         icon: '<emoji()>'
